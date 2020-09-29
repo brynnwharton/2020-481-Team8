@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ActivityFeedComponent } from './activity-feed/activity-feed.component';
+import { FriendsComponent } from './friends/friends.component';
+import { EnterActivityComponent } from './enter-activity/enter-activity.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActivityFeedComponent,
+    FriendsComponent,
+    EnterActivityComponent
   ],
   imports: [
     BrowserModule,
