@@ -1,9 +1,15 @@
-<style></style>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Where Were You</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/activity-feed'"> Activity Feed </a>
+        <a mat-button [routerLink]="'/friends'"> Friends </a>
+        <a mat-button [routerLink]="'/enter-activity'"> Enter Activity </a>
+      </div>
+    </mat-toolbar-row>
 
-<body>
-  <p>this is the landing page, it should be used to launch like the login page on facebook</p>
-  <p>subarna put your stuff in here for the front end log in/sign up stuff</p>
-</body>
+  </mat-toolbar>
 
 
 <router-outlet></router-outlet>
