@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "where-were-you"
+  "defaultProject": "where-were-you",
+  "cli": {
+    "analytics": false
+  }
 }
