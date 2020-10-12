@@ -17,6 +17,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { EnterActivityComponent } from './enter-activity/enter-activity.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ActivityFeedComponent,
     FriendsComponent,
     EnterActivityComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
