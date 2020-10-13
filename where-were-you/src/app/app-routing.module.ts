@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ActivityFeedComponent } from './activity-feed/activity-feed.component';
 import { AppComponent } from './app.component';
 import { EnterActivityComponent } from './enter-activity/enter-activity.component';

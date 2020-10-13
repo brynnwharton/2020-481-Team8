@@ -1,0 +1,40 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one{
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+.spacer{
+  grid-column: 1/4;
+  grid-row: 2;
+}
+.friend{
+  display: grid;
+}
+.avatar {
+  max-height: 10px;
+  max-width: 10px;
+}
+.plus {
+  grid-column: 4;
+  grid-row: 4;
+}
+.plusButton{
+  display: inline-block;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  width: 90x;
+  background-color: white;
+  border: none;
+}
+.plusImg{
+  display: block;
+  height: 80px;
+  width: 80px;
+}
