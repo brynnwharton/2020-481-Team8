@@ -4,10 +4,17 @@
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-/* .avatar {
+.one{
   grid-column: 1 / 4;
-  grid-row: 1;
-} */
+  grid-row: 1 / 2;
+}
+.friend{
+  display: grid;
+}
+.avatar {
+  max-height: 10px;
+  max-width: 10px;
+}
 .plus {
   grid-column: 4;
   grid-row: 4;

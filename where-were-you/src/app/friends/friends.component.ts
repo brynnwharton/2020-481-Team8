@@ -5,6 +5,13 @@ function displayPerson(name: string) {
 
   const newDiv = document.createElement("div")
   newDiv.appendChild(document.createTextNode(name))
+  newDiv.className = "friend"
+
+  const newImg = document.createElement("img")
+  newImg.src = "../../assets/img/blankAvatar.jpg"
+  newImg.className = "avatar"
+  newImg.setAttribute("style", "height: 100px")
+  newDiv.appendChild(newImg)
 
   return newDiv
 }
