@@ -6,6 +6,7 @@ function displayPerson(name: string) {
   const newDiv = document.createElement("div")
   newDiv.appendChild(document.createTextNode(name))
   newDiv.className = "friend"
+  newDiv.setAttribute("style", "display: grid")
 
   const newImg = document.createElement("img")
   newImg.src = "../../assets/img/blankAvatar.jpg"
