@@ -4,15 +4,22 @@ function displayPerson(name: string) {
   console.log(name)
 
   const newDiv = document.createElement("div")
-  newDiv.appendChild(document.createTextNode(name))
+  //newDiv.appendChild(document.createTextNode(name))
   newDiv.className = "friend"
-  newDiv.setAttribute("style", "display: grid")
+
+  const fig = document.createElement("figure")
+  const figCap = document.createElement("figcaption")
+  figCap.textContent = name + " went to walmart"
 
   const newImg = document.createElement("img")
   newImg.src = "../../assets/img/blankAvatar.jpg"
   newImg.className = "avatar"
   newImg.setAttribute("style", "height: 100px")
   newDiv.appendChild(newImg)
+
+  fig.appendChild(newImg)
+  fig.appendChild(figCap)
+  newDiv.appendChild(fig)
 
   return newDiv
 }
@@ -27,7 +34,7 @@ export class FriendsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let friendsList = ["sally", "bob"]
+    let friendsList = ["sally", "bob", "bryan", "joe", "sarah"]
     friendsList.forEach((value)=>{
       let parentDiv = document.getElementById("wrapper")
       let beforeDiv = document.getElementById("add")

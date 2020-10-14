@@ -1,3 +1,28 @@
-<p>enter-activity works!</p>
+<head>
+  <link rel="stylesheet" href="./enter-activity.component.css">
+</head>
+
+<body>
+
+<h2>Enter Activity</h2>
+
+<div class="enterActivity">
+
+  <input type="text" placeholder="Enter Location">
+
+  <p>What Precautions did You Take?</p>
+  <input type="checkbox" value="Facial Covering" name="precaution" ngModel> Facial Covering
+  <input type="checkbox" value="Social Distancing" name="precaution" ngModel> Social Distancing
+  <input type="checkbox" value="Curbside Pickup" name="precaution" ngModel> Curbside Pickup
+
+  <p>Time of Visit</p>
+  <input [ngxTimepicker]="picker" placeholder="12:00 AM">
+  <ngx-material-timepicker #picker></ngx-material-timepicker>
+
+  <button>Submit</button>
+
+</div>
+
+</body>
 
 <router-outlet></router-outlet>
