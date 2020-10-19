@@ -7,13 +7,15 @@ import { EnterActivityComponent } from './enter-activity/enter-activity.componen
 import { FriendsComponent } from './friends/friends.component';
 import { LoginComponent } from './login/login.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'friends', component: FriendsComponent},
   {path: 'activity-feed', component: ActivityFeedComponent},
   {path: 'enter-activity', component: EnterActivityComponent},
-  {path: 'forget-password', component: ForgetPasswordComponent}
+  {path: 'forget-password', component: ForgetPasswordComponent},
+  {path: 'account', component: AccountComponent}
 ];
 
 @NgModule({

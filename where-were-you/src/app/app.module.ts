@@ -19,6 +19,7 @@ import { EnterActivityComponent } from './enter-activity/enter-activity.componen
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     FriendsComponent,
     EnterActivityComponent,
     LoginComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

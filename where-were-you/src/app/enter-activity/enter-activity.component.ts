@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-enter-activity',
   templateUrl: './enter-activity.component.html',
@@ -11,5 +12,10 @@ export class EnterActivityComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  submitButtonClicked(){
+    console.log("submit Button Clicked")
+  }
+
 
 }
