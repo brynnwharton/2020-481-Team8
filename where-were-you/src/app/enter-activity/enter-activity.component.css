@@ -1,3 +1,35 @@
 .enterActivity{
-  margin: 10px;
+  margin: auto;
 }
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+label .center{
+  white-space: nowrap;
+  display: inline-block;
+  padding-right: 15px;
+}
+button {
+  background-color: #0062cc;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 8px;
+}
+input{
+  border-radius: 8px;
+  border: solid;
+  border-width: 1px;
+  display: flex;
+}
+ngx-material-timepicker{
+  margin-left: 40%;
+}
+
