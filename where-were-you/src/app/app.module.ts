@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 
 //custom imports
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +31,7 @@ import { AccountComponent } from './account/account.component';
     EnterActivityComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    AccountComponent
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,9 @@ import { AccountComponent } from './account/account.component';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
