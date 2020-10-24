@@ -18,9 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', [UserController::class, 'getUser']);
+// Route::get('/user', [UserController::class, 'getUser']);
 
 Route::post('/user', [UserController::class, 'postUser']);
+Route::post('/login', [UserController::class, 'loginUser']);
 
 Route::get('/hello', function () {
     return view('hello');
