@@ -7,6 +7,7 @@
 .one{
   grid-column: 1 / 4;
   grid-row: 1;
+  text-align: center;
 }
 .spacer{
   grid-column: 1/4;
