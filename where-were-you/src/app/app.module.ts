@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule} from '@angular/forms';
+import { UsMapModule } from 'ng4-us-map';
 
 //custom imports
 import { HttpClientModule } from '@angular/common/http';
@@ -46,6 +47,8 @@ import { AccountComponent } from './account/account.component';
     NgxMaterialTimepickerModule,
     ReactiveFormsModule,
     FormsModule,
+    UsMapModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

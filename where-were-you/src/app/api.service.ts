@@ -25,5 +25,8 @@ export class ApiService {
   public insertUser(data){
     return this.httpClient.post('http://127.0.0.1:8000/api/register', data);
   }
+  public getCovidData(): Observable<Object>{
+     return this.httpClient.get('https://api.covidtracking.com/v1/states/current.json');
+   }
 
 }

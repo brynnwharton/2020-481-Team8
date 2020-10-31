@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 function getActivity(name: string) {
   console.log(name)
@@ -39,8 +40,12 @@ function getActivity(name: string) {
   styleUrls: ['./activity-feed.component.css']
 })
 export class ActivityFeedComponent implements OnInit {
+  public $data: any;
+  public $state:any;
 
-  constructor() { }
+  constructor(
+    private dataService: ApiService
+  ) {}
 
   ngOnInit(): void {
     let friendsList = ["sally", "bob", "bryan", "joe", "sarah"]
@@ -48,8 +53,24 @@ export class ActivityFeedComponent implements OnInit {
       let tableBody = document.getElementById("body")
       let newRow = getActivity(value)
       tableBody.appendChild(newRow)
-    })
+    }),
+    this.getdataCovid()
 
+  }
+
+  getdataCovid(){
+    this.dataService.getCovidData().subscribe((Response:any)=>{
+      this.$data = Response;
+    });
+}
+
+usMapClick($event){
+    //this.$state = $event["state-abbr"];
+    this.$data.forEach(function(state){
+      if(state["state"] == $event["state-abbr"]){
+        console.log(state);
+      }
+    })
   }
 
 }
