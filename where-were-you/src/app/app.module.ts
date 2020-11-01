@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 
@@ -23,6 +24,7 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { AccountComponent } from './account/account.component';
+import { DialogCovidComponent } from './dialog-covid/dialog-covid.component';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,13 @@ import { AccountComponent } from './account/account.component';
     ReactiveFormsModule,
     FormsModule,
     UsMapModule,
+    MatDialogModule,
 
   ],
   providers: [],
+  entryComponents: [
+    DialogCovidComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
