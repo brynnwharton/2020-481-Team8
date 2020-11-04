@@ -8,15 +8,15 @@
 
 <div class="enterActivity">
 
-  <input class="center" type="text" placeholder="Enter Location">
+  <input class="center" id="location" type="text" placeholder="Enter Location">
 
   <p class="center">What Precautions did You Take?</p>
-  <label class="center"><input class="center" type="checkbox" value="Facial Covering" name="precaution" ngModel> Facial Covering</label>
-  <label class="center"><input class="center" type="checkbox" value="Social Distancing" name="precaution" ngModel> Social Distancing</label>
-  <label class="center"><input class="center" type="checkbox" value="Curbside Pickup" name="precaution" ngModel> Curbside Pickup</label>
+  <label class="center"><input class="center" [(ngModel)]="faceCovering" type="checkbox" value="Facial Covering" name="precaution" ngModel> Facial Covering</label>
+  <label class="center"><input class="center" [(ngModel)]="socialDistancing" id="precaution1" type="checkbox" value="Social Distancing" name="precaution" ngModel> Social Distancing</label>
+  <label class="center"><input class="center" [(ngModel)]="curbside" type="checkbox" value="Curbside Pickup" name="precaution" ngModel> Curbside Pickup</label>
 
   <p class="center">Time of Visit</p>
-  <input [ngxTimepicker]="picker" placeholder="12:00 AM">
+  <input [ngxTimepicker]="picker" id="time" placeholder="12:00 AM">
   <ngx-material-timepicker class="center" #picker></ngx-material-timepicker>
 
   <br>

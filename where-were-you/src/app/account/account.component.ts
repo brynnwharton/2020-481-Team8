@@ -6,21 +6,21 @@ function displayAccount(name: string) {
   const newDiv = document.createElement("div")
   newDiv.className = "user"
 
-  const fig = document.createElement("figure")
-  const figCap = document.createElement("figcaption")
-  figCap.textContent = name
-  figCap.setAttribute("style", "height: 100px; text-align: center")
+  const username = document.createElement("h3")
+  username.textContent = name
+  username.setAttribute("style", "text-align: center")
+  newDiv.appendChild(username)
 
+  return newDiv
+}
 
-  const newImg = document.createElement("img")
-  newImg.src = "../../assets/img/blankAvatar.jpg"
-  newImg.className = "avatar"
-  newImg.setAttribute("style", "height: 100px; display: block; margin-left: auto; margin-right: auto;")
-  newDiv.appendChild(newImg)
+function displayActivity(action: string){
+  const newDiv = document.createElement("div")
 
-  fig.appendChild(newImg)
-  fig.appendChild(figCap)
-  newDiv.appendChild(fig)
+  const activity = document.createElement("p")
+  activity.textContent = action
+  activity.setAttribute("style", "text-align: center")
+  newDiv.appendChild(activity)
 
   return newDiv
 }
@@ -39,6 +39,13 @@ export class AccountComponent implements OnInit {
     let parentDiv = document.getElementById("accountInfo")
     let newDiv = displayAccount(name)
     parentDiv.appendChild(newDiv)
+
+    let activityList = ["store", "friend's house", "gym", "mom's house", "gym"]
+    activityList.forEach((value)=>{
+      let parent = document.getElementById("recentActivity")
+      let newActivity = displayActivity(value)
+      parent.appendChild(newActivity)
+    })
   }
 
 }

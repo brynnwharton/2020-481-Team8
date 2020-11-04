@@ -8,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnterActivityComponent implements OnInit {
 
-  constructor() { }
+  faceCovering : boolean;
+  socialDistancing : boolean;
+  curbside : boolean;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
   submitButtonClicked(){
-    console.log("submit Button Clicked")
+    let location = (document.getElementById("location")as HTMLInputElement).value
+    let faceCovering = this.faceCovering
+    let socialDistancing = this.socialDistancing
+    let curbside = this.curbside
+    let time = (document.getElementById("time")as HTMLInputElement).value
+    console.log(location, time, faceCovering, socialDistancing, curbside)
+
   }
 
 
