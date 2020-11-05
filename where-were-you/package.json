@@ -21,11 +21,8 @@
     "@angular/platform-browser": "~10.1.0",
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
-<<<<<<< Updated upstream
     "ng4-us-map": "^1.0.3",
-=======
     "jwt-decode": "^3.0.0",
->>>>>>> Stashed changes
     "ngx-material-timepicker": "^5.5.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

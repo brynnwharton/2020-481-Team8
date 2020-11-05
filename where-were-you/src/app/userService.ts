@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Console } from 'console';
+// import { Console } from 'console';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class UserService {
   public isUserLoggedIn;
   public matricula;
   constructor() {
-    
+
   }
 
   setUserLoggedIn() {

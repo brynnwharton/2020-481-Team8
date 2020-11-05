@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../userService";
 
 function displayAccount(name: string) {
   console.log(name)
@@ -33,9 +34,10 @@ function displayActivity(action: string){
 export class AccountComponent implements OnInit {
 
   constructor() { }
+  us = new UserService()
 
   ngOnInit(): void {
-    let name = "Brynn"
+    let name = this.us.getFirstName()
     let parentDiv = document.getElementById("accountInfo")
     let newDiv = displayAccount(name)
     parentDiv.appendChild(newDiv)
