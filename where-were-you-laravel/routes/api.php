@@ -23,9 +23,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/postActivity', [AuthController::class, 'postActivity']);
+Route::get('/getActivity', [AuthController::class, 'getActivity']);
   
-Route::group(['middleware' => 'auth.jwt'], function () {
+// Route::group(['middleware' => 'auth.jwt'], function () {
  
-    Route::get('logout', 'AuthController@logout');
-    Route::get('user-info', 'AuthController@getUser');
-});
+//     Route::get('logout', 'AuthController@logout');
+//     Route::get('user-info/{id}', 'AuthController@getUser')->where('id', '[0-9]+');
+// });

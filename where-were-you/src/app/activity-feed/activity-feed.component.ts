@@ -1,3 +1,4 @@
+import { useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -23,6 +24,8 @@ function getActivity(name: string) {
 
   return newRow
 }
+import { LoginComponent } from 'src/app/login/login.component';
+import { UserService } from '../userService';
 
 @Component({
   selector: 'app-activity-feed',
@@ -33,6 +36,10 @@ export class ActivityFeedComponent implements OnInit {
   public $data: any;
   public $state:any;
   public $detail:any;
+
+  us = new UserService();
+
+  isLoggedIn = this.us.getUserLoggedIn();
 
   constructor(
     private dataService: ApiService,
@@ -82,5 +89,4 @@ export class ActivityFeedComponent implements OnInit {
 
       });
   }
-
 }
