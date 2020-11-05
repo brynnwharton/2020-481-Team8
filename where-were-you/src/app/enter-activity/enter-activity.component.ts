@@ -20,11 +20,12 @@ export class EnterActivityComponent implements OnInit {
 
   submitButtonClicked(){
     let location = (document.getElementById("location")as HTMLInputElement).value
-    let faceCovering = this.faceCovering
-    let socialDistancing = this.socialDistancing
-    let curbside = this.curbside
+    let faceCovering = this.faceCovering ? true : false
+    let socialDistancing = this.socialDistancing ? true : false
+    let curbside = this.curbside ? true : false
     let time = (document.getElementById("time")as HTMLInputElement).value
-    console.log(location, time, faceCovering, socialDistancing, curbside)
+    let today = new Date().toISOString().slice(0, 10)
+    console.log(location, time, today, faceCovering, socialDistancing, curbside)
 
   }
 
