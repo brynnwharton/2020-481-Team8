@@ -111,6 +111,24 @@ class AuthController extends Controller
         }
     }
 
+    public function resetUser(Request $request){
+        $user = User::where("email",$request->email)->first();
+        if($user != null){
+            $user->password = bcrypt($request->password);
+            $user->save();
+            return response()->json([
+                'success' => 1,
+                'message' => 'Password reset Successful'
+            ]);
+        }
+        else{
+            return response()->json([
+                'success' => 0,
+                'message' => 'User Cannot be found'
+            ]); 
+        }
+    }
+
     public function postActivity(Request $request){
         $activity = new Activity();
         $activity->email = $request->email;

@@ -26,6 +26,10 @@ export class ApiService {
     return this.httpClient.post('http://127.0.0.1:8000/api/register', data);
   }
 
+  public resetUser(data){
+   return this.httpClient.post('http://127.0.0.1:8000/api/reset', data);
+  }
+
   public postActivity(data){
     return this.httpClient.post('http://127.0.0.1:8000/api/postActivity', data);
   }

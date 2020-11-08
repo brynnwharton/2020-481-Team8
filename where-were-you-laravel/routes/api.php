@@ -23,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/reset', [AuthController::class, 'resetUser']);
 Route::post('/postActivity', [AuthController::class, 'postActivity']);
 Route::get('/getActivity', [AuthController::class, 'getActivity']);
   
