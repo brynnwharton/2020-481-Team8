@@ -19,7 +19,7 @@ class CreateActivityTable extends Migration
             $table->string('time');
             $table->boolean('FC');
             $table->boolean('SD');
-            $table->booolean('CP');
+            $table->boolean('CP');
         });
     }
 
