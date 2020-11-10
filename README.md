@@ -15,8 +15,6 @@ https://docs.google.com/presentation/d/1bcoOJr7x47Bmh5c_VHD4CbJ3duCnzg16mh_txu3y
 Sprint 4
 https://docs.google.com/document/d/1EOd3YMSl8dubEnYqv54vZQn1dhjshBfvKCM_vcVPDe4/edit?usp=sharing
 
-# List of Possible API's
-* https://coronavirusapi.com/
-* https://covid19api.com/#subscribe
-* https://www.mapbox.com/
-* https://cloud.google.com/maps-platform
+Virtual Senior Showcase
+https://docs.google.com/document/d/1k2Wga4HU9AHNc24GxTn1HN652Yhjkrn8GRt669N3i7s/edit?usp=sharing
+
