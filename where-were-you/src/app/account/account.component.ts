@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from "../userService";
+import { Router } from '@angular/router';
 
 function displayAccount(name: string) {
   console.log(name)
@@ -33,7 +34,9 @@ function displayActivity(action: string){
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
   us = new UserService()
 
   ngOnInit(): void {
@@ -48,6 +51,11 @@ export class AccountComponent implements OnInit {
       let newActivity = displayActivity(value)
       parent.appendChild(newActivity)
     })
+  }
+  logout(){
+    this.us.setUserLoggedOut();
+    console.log(this.us);
+    this.router.navigate(['/']);
   }
 
 }

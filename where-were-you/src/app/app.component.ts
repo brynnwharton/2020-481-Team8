@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { UserService } from './userService';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'where-were-you';
+  us = new UserService();
+  isLoggedIn = this.us.getUserLoggedIn();
+  constructor(
+  ){
+    console.log(this.isLoggedIn);
+  }
+
 }

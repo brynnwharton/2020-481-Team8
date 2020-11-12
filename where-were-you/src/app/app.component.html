@@ -1,13 +1,18 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <a mat-button [routerLink]="'/'"> <h1>Where Were You </h1></a>
+      <div *ngIf="this.us.getUserLoggedIn() == 'true'; else loggedOut;">
       <span class="menu-spacer"></span>
       <div>
-        <a mat-button [routerLink]="'/activity-feed'"> Activity Feed </a>
+        <a mat-button [routerLink]="'/activity-feed'"> <h1>Where Were You </h1></a>
+        <!-- <a mat-button [routerLink]="'/activity-feed'"> Activity Feed </a> -->
         <!-- <a mat-button [routerLink]="'/friends'"> Friends </a> -->
         <a mat-button [routerLink]="'/enter-activity'"> Enter Activity </a>
         <a mat-button [routerLink]="'/account'"> Account </a>
       </div>
+      </div>
+      <ng-template #loggedOut>
+        <a> <h1>Where Were You </h1></a>
+      </ng-template>
     </mat-toolbar-row>
 
   </mat-toolbar>
