@@ -4,6 +4,8 @@
 .center{
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%; 
   display: block;
   text-align: center;
 }
@@ -12,7 +14,7 @@ label .center{
   display: inline-block;
   padding-right: 15px;
 }
-button {
+/* button {
   background-color: #0062cc;
   border: none;
   color: white;
@@ -22,7 +24,7 @@ button {
   display: inline-block;
   font-size: 12px;
   border-radius: 8px;
-}
+} */
 input{
   border-radius: 8px;
   border: solid;
@@ -32,4 +34,39 @@ input{
 ngx-material-timepicker{
   margin-left: 40%;
 }
+#time {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
 
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 30%;
+    margin-left: 35%;
+}
+
+.reset-form{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.reset-form h3{
+    text-align: center;
+    color: #fff;
+}
+.container form{
+    padding: 5%;
+}
+button
+{
+    width: 45%;
+    border-radius: 1rem;
+    margin-right: 5%;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
