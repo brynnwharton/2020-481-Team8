@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use JWTAuth;
 use Validator;
 use App\Models\User;
+use App\Models\Activity;
 use App\Http\Requests\Register\AuthRequest;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Symfony\Component\HttpFoundation\Response;
@@ -132,19 +133,30 @@ class AuthController extends Controller
     public function postActivity(Request $request){
         $activity = new Activity();
         $activity->email = $request->email;
+        $activity->location = $request->location;
         $activity->time = $request->time;
         $activity->FC = $request->FC;
         $activity->SD = $request->SD;
-        $activity->CP = $request->cp;
+        $activity->CP = $request->CP;
         $activity->save();
 
         return response()->json([
+            'success' => 1,
+            'message' => 'Post Activity Successful',
             'activity' => $activity
         ], 200);
     }
 
     public function getActivity(Request $request){
-        $activity = Activity::where("email",$request->email);
+        $activity = Activity::all()->where("email",$request->email);
+
+        return response()->json([
+            'activity' => $activity
+        ]);
+    }
+
+    public function getRecentActivity(Request $request){
+        $activity = Activity::all();
 
         return response()->json([
             'activity' => $activity

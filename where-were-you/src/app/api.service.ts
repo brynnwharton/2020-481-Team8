@@ -38,6 +38,10 @@ export class ApiService {
     return this.httpClient.get('http://127.0.0.1:8000/api/getActivity', data);
   }
 
+  public getRecentActivity(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/getActivity');
+  }
+
   public getCovidData(): Observable<Object>{
     return this.httpClient.get('https://api.covidtracking.com/v1/states/current.json');
   }

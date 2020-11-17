@@ -26,6 +26,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/reset', [AuthController::class, 'resetUser']);
 Route::post('/postActivity', [AuthController::class, 'postActivity']);
 Route::get('/getActivity', [AuthController::class, 'getActivity']);
+Route::get('/getRecentActivity', [AuthController::class, 'getRecentActivity']);
   
 // Route::group(['middleware' => 'auth.jwt'], function () {
  
