@@ -34,12 +34,12 @@ export class ApiService {
     return this.httpClient.post('http://127.0.0.1:8000/api/postActivity', data);
   }
 
-  public getActivity(data){
-    return this.httpClient.get('http://127.0.0.1:8000/api/getActivity', data);
+  public getActivity(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/getActivity');
   }
 
   public getRecentActivity(){
-    return this.httpClient.get('http://127.0.0.1:8000/api/getActivity');
+    return this.httpClient.get('http://127.0.0.1:8000/api/getRecentActivity');
   }
 
   public getCovidData(): Observable<Object>{

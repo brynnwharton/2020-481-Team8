@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DialogCovidComponent } from '../dialog-covid/dialog-covid.component';
+import { activity } from '../enter-activity/enter-activity.component'
+import { map } from 'rxjs/operators'
 
-function getActivity(name: string) {
+function getActivity(name: string, activity: string, time: string) {
   const newRow = document.createElement("tr")
   newRow.className = "row"
 
@@ -17,10 +19,17 @@ function getActivity(name: string) {
 
   const column2 = document.createElement("td")
   const location = document.createElement("p")
-  location.textContent = "the store"
+  location.textContent = activity
   column2.appendChild(location)
 
   newRow.appendChild(column2)
+
+  const column3 = document.createElement("td")
+  const t = document.createElement("p")
+  t.textContent = time
+  column3.appendChild(t)
+
+  newRow.appendChild(column3)
 
   return newRow
 }
@@ -36,6 +45,7 @@ export class ActivityFeedComponent implements OnInit {
   public $data: any;
   public $state:any;
   public $detail:any;
+  public activites: activity[];
 
   us = new UserService();
 
@@ -47,12 +57,20 @@ export class ActivityFeedComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let friendsList = ["sally", "bob", "bryan", "joe", "sarah"]
-    friendsList.forEach((value)=>{
-      let tableBody = document.getElementById("body")
-      let newRow = getActivity(value)
-      tableBody.appendChild(newRow)
-    }),
+     let activities;
+     this.dataService.getRecentActivity().subscribe(res => {
+       activities = res;
+       console.log(activities.activity[0].email);
+       activities.activity.forEach(state => {
+        let tableBody = document.getElementById("body")
+        let newRow = getActivity(state.email, state.location, state.time);
+        tableBody.appendChild(newRow)
+      });
+     });
+      
+
+      
+    
     this.getdataCovid()
 
   }
@@ -90,3 +108,4 @@ export class ActivityFeedComponent implements OnInit {
       });
   }
 }
+

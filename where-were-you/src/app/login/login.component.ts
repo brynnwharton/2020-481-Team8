@@ -116,6 +116,7 @@ export class LoginComponent implements OnInit {
   }
 
   private createSession(data){
+    this.us.setEmail(data.email);
     this.us.setFirstName(data.firstname);
     this.us.setLastName(data.lastname);
     this.us.setAddress(data.address);

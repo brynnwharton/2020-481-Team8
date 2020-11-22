@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from "../userService";
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 function displayAccount(name: string) {
   console.log(name)
@@ -35,6 +36,7 @@ function displayActivity(action: string){
 export class AccountComponent implements OnInit {
 
   constructor(
+    private dataService: ApiService,
     private router: Router
   ) { }
   us = new UserService()
@@ -45,12 +47,22 @@ export class AccountComponent implements OnInit {
     let newDiv = displayAccount(name)
     parentDiv.appendChild(newDiv)
 
-    let activityList = ["store", "friend's house", "gym", "mom's house", "gym"]
-    activityList.forEach((value)=>{
-      let parent = document.getElementById("recentActivity")
-      let newActivity = displayActivity(value)
-      parent.appendChild(newActivity)
-    })
+    // let activityList = ["store", "friend's house", "gym", "mom's house", "gym"]
+    // activityList.forEach((value)=>{
+    //   let parent = document.getElementById("recentActivity")
+    //   let newActivity = displayActivity(value)
+    //   parent.appendChild(newActivity)
+    // })
+
+    let activities;
+     this.dataService.getRecentActivity().subscribe(res => {
+       activities = res;
+       activities.activity.forEach(state => {
+        let parent = document.getElementById("recentActivity")
+        let newActivity = displayActivity(state.location);
+        parent.appendChild(newActivity)
+      });
+     });
   }
   logout(){
     this.us.setUserLoggedOut();

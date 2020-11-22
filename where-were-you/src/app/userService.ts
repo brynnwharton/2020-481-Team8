@@ -25,7 +25,6 @@ export class UserService {
     sessionStorage.setItem('login',this.isUserLoggedIn);
   }
   getUserLoggedIn() {
-    console.log(this.isUserLoggedIn);
     return (sessionStorage.getItem('login') != null ? sessionStorage.getItem('login') : false);
   }
   setUserLoggedOut() {
