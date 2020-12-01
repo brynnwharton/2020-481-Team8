@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../userService';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class EnterActivityComponent implements OnInit {
   data: any;
 
   constructor(
-    private dataService: ApiService
+    private dataService: ApiService,
+    private router: Router
   ) {
   }
 
@@ -47,7 +49,6 @@ export class EnterActivityComponent implements OnInit {
     this.dataService.postActivity(this.activity).subscribe(res => {
       this.data = res;
     });
-
   }
 
 

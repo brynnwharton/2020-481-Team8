@@ -7,6 +7,7 @@ import { activity } from '../enter-activity/enter-activity.component'
 import { map } from 'rxjs/operators'
 
 function getActivity(name: string, activity: string, time: string) {
+  
   const newRow = document.createElement("tr")
   newRow.className = "row"
 
@@ -67,10 +68,10 @@ export class ActivityFeedComponent implements OnInit {
         tableBody.appendChild(newRow)
       });
      });
-      
 
-      
-    
+
+
+
     this.getdataCovid()
 
   }
@@ -108,4 +109,3 @@ export class ActivityFeedComponent implements OnInit {
       });
   }
 }
-
